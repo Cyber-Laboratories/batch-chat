@@ -1,7 +1,7 @@
-rem Ein Skript von FloJo_1
+REM Ein Skript von Cyber_sKO & lolboy58
 @ echo off
 @ color 0c
-@ title Batch-Chat by Florian
+@ title Batch-Chat
 @ mode con cols=35 lines=20
 
 :GehtNed

@@ -1,7 +1,7 @@
-rem Ein Skript von FloJo_1
+REM Ein Skript von Cyber_sKO & lolboy58
 @ echo off
 @ color 0c
-@ title Batch-Chat by Florian
+@ title Batch-Chat
 @ mode con cols=35 lines=20
 
 REM --- Setzten ---
@@ -18,7 +18,7 @@ echo.
 echo Bitte Passwort eingeben
 set /p pwe=Passwort: 
  if %pwe%==%pwr% goto Ueberprufen
-goto WPW
+goto error002
 
 REM --- Gesperrt ---
 :Ueberprufen
@@ -42,6 +42,7 @@ cls
 echo %date%, %time% >>Y:/Batch-Chat/data/users/%NName%/entry.acc
 ipconfig /all|findstr "Hostname IP-Adr" >>Y:/Batch-Chat/data/users/%NName%/entry.acc
 ipconfig /all|findstr "IP-Adr" >>Y:/Batch-Chat/data/users/%NName%/entry.acc
+echo ########### >>Y:/Batch-Chat/data/user/%NName%/entry.acc
 goto weiteroe
 :weiteroe
  if %asu%==true goto Admin
@@ -131,7 +132,7 @@ REM --- Beenden ---
 exit /b
 
 REM --- Fehler ---
-:WPW
+:error002
 cls
 echo.
 echo Falsches Passwort eingegeben!

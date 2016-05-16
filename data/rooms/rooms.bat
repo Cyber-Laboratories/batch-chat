@@ -1,8 +1,9 @@
-rem Ein Skript von FloJo_1
+REM Ein Skript von Cyber_sKO & lolboy58
 @ echo off
 @ color 0c
-@ title Batch-Chat by Florian
+@ title Batch-Chat
 @ mode con cols=45 lines=35
+
 REM --- Uebersicht ---
 :Start
 cls
@@ -22,10 +23,11 @@ echo Bitte gib den Namen deiens Raumes ein
 echo (ohne .bat)
 echo.
 set /P room= Namen des Raumes (ohne .bat):
-if not exist Y:\Batch-Chat\data\rooms\rooms\%room%.bat goto rnf
+if not exist Y:\Batch-Chat\data\rooms\rooms\%room%.bat goto error003
 call "Y:\Batch-Chat\data\rooms\rooms\%room%.bat"
+
 REM --- Error ---
-:rnf
+:error003
 cls
 echo.
 echo Raum konnte nicht gefunden Werden.
